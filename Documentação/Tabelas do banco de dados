@@ -1,0 +1,12 @@
+professor (id_professor*, nome, email, link_lattes, descricao, foto)
+graduacao (id_graduacao*, id_professor**, local, ano_obtencao)
+mestrado (id_mestrado*, id_professor**, local, ano_obtencao)
+doutorado (id_doutorado*, id_professor**, local, ano_obtencao)
+pós_doutorado (id_pos_doutorado*, id_professor**, local, ano_obtencao)
+livre_docencia (id_livre_docencia*, id_professor**, local, ano_obtencao)
+linha_pesquisa (id_linha_pesquisa*, nome, descricao)
+professor_linha_pesquisa (id_professor**, id_linha_pesquisa**)
+
+OBS - notação:
+-*: chave-primária
+-**: chave-estrangeira
