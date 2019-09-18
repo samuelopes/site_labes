@@ -1,7 +1,3 @@
-<?php 
-  include("Class/ClassCrud.php");
-?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -37,7 +33,6 @@
 </head>
 
 <body>
-  
 
 <!-- header -->
 <header class="fixed-top header">
@@ -58,65 +53,51 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><h2 class="text-primary font-secondary">Our Professors</h2></li>
+          <li class="list-inline-item"><h2 class="text-primary font-secondary">Contact Us</h2></li>
           <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
         </ul>
+        <p class="text-lighten">Do you have other questions? Don't worry. Just fill out the form below and we'll get back to you as soon as possible.</p>
       </div>
     </div>
   </div>
 </section>
 <!-- /page title -->
 
-<!-- teachers -->
-<section class="section">
-  <div data-ref="mixitup-target" class="container">
+<!-- contact -->
+<section class="section bg-gray">
+  <div class="container">
     <div class="row">
-      <div class="col-12">
-        <!-- teacher category list
-        <ul class="list-inline text-center filter-controls mb-5">
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".arts">arts</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".bio-science">biological science</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".business-study">business studies</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".law">law</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".pharmacy">pharmacy</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".science">science</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".social-science">social science</li>
-        </ul>-->
+      <div class="col-lg-12">
+        <h2 class="section-title">Contact Us</h2>
       </div>
     </div>
-    <!-- teacher list -->
-    <div class="row" data-ref="mixitup-container">
-      <?php
-        $Crud = new ClassCrud();
-        $BFetch = $Crud->selectDB("*", "professor", "", array());
-
-        while ($Fetch = $BFetch->fetch(PDO::FETCH_ASSOC)){
-      ?>
-      <!-- teacher -->
-      <div data-ref="mixitup-target" class="col-lg-4 col-sm-6 mb-5 arts law">
-        <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-          <div class="card-body">
-            <a href="teacher-single.php?id_prof=<?php echo $Fetch['id_professor']; ?>">
-              <h4 class="card-title"><?php echo $Fetch['nome']; ?></h4>
-            </a>
-            <!--<p>Teacher</p>-->
-            <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <form action="#">
+          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
+          <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
+          <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
+          <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+        </form>
       </div>
-      <?php
-      }
-      ?>
+      <div class="col-lg-5">
+        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt. Dolore, labore. Accusamus nulla sed cum aliquid exercitationem debitis error harum porro maxime quo iusto aliquam dicta modi earum fugiat, vel possimus commodi, deleniti et veniam, fuga ipsum praesentium. Odit unde optio nulla ipsum quae obcaecati! Quod esse natus quibusdam asperiores quam vel, tempore itaque architecto ducimus expedita</p>
+        <a href="tel:+8802057843248" class="text-color h5 d-block">+880 20 5784 3248</a>
+        <a href="mailto:yourmail@email.com" class="mb-5 text-color h5 d-block">yourmail@email.com</a>
+        <p>71 Shelton Street<br>London WC2H 9JQ England</p>
+      </div>
     </div>
   </div>
 </section>
-<!-- /teachers -->
+<!-- /contact -->
+
+<!-- gmap -->
+<section class="section pt-0">
+  <!-- Google Map -->
+  <div id="map_canvas" data-latitude="-22.00704474" data-longitude="-47.89489746"></div>
+</section>
+<!-- /gmap -->
 
 <!-- footer -->
 <?php

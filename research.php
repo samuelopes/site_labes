@@ -1,7 +1,3 @@
-<?php 
-  include("Class/ClassCrud.php");
-?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -58,7 +54,7 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><h2 class="text-primary font-secondary">Our Professors</h2></li>
+          <li class="list-inline-item"><h2 class="text-primary font-secondary">Our Research Areas</h2></li>
           <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
         </ul>
       </div>
@@ -67,56 +63,68 @@
 </section>
 <!-- /page title -->
 
-<!-- teachers -->
+<!-- research -->
 <section class="section">
-  <div data-ref="mixitup-target" class="container">
+  <div class="container">
     <div class="row">
-      <div class="col-12">
-        <!-- teacher category list
-        <ul class="list-inline text-center filter-controls mb-5">
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".arts">arts</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".bio-science">biological science</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".business-study">business studies</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".law">law</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".pharmacy">pharmacy</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".science">science</li>
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".social-science">social science</li>
-        </ul>-->
-      </div>
-    </div>
-    <!-- teacher list -->
-    <div class="row" data-ref="mixitup-container">
-      <?php
-        $Crud = new ClassCrud();
-        $BFetch = $Crud->selectDB("*", "professor", "", array());
-
-        while ($Fetch = $BFetch->fetch(PDO::FETCH_ASSOC)){
-      ?>
-      <!-- teacher -->
-      <div data-ref="mixitup-target" class="col-lg-4 col-sm-6 mb-5 arts law">
-        <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-1.jpg" alt="research thumb">
           <div class="card-body">
-            <a href="teacher-single.php?id_prof=<?php echo $Fetch['id_professor']; ?>">
-              <h4 class="card-title"><?php echo $Fetch['nome']; ?></h4>
-            </a>
-            <!--<p>Teacher</p>-->
-            <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
-              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
+            <h4 class="card-title">Geography</h4>
           </div>
         </div>
       </div>
-      <?php
-      }
-      ?>
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-2.jpg" alt="research thumb">
+          <div class="card-body">
+            <h4 class="card-title">Mathematical</h4>
+          </div>
+        </div>
+      </div>
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-3.jpg" alt="research thumb">
+          <div class="card-body">
+            <h4 class="card-title">Humanities</h4>
+          </div>
+        </div>
+      </div>
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-4.jpg" alt="research thumb">
+          <div class="card-body">
+            <h4 class="card-title">Physical & Sciences</h4>
+          </div>
+        </div>
+      </div>
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-5.jpg" alt="research thumb">
+          <div class="card-body">
+            <h4 class="card-title">Biological Sciences</h4>
+          </div>
+        </div>
+      </div>
+      <!-- recharch item -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card rounded-0 hover-shadow border-top-0 border-left-0 border-right-0">
+          <img class="card-img-top rounded-0" src="images/research/research-6.jpg" alt="research thumb">
+          <div class="card-body">
+            <h4 class="card-title">Archaeology</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- /teachers -->
+<!-- /research -->
 
 <!-- footer -->
 <?php
