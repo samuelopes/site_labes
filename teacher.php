@@ -98,15 +98,15 @@
           <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
           <div class="card-body">
             <a href="teacher-single.php?id_prof=<?php echo $Fetch['id_professor']; ?>">
-              <h4 class="card-title"><?php echo $Fetch['nome']; ?></h4>
+              <h4 class="card-title"><?php echo utf8_encode($Fetch['nome']); ?></h4>
             </a>
-            <!--<p>Teacher</p>-->
+            <!--<p>Teacher</p>
             <ul class="list-inline">
               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
               <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
-            </ul>
+            </ul>-->  
           </div>
         </div>
       </div>

@@ -135,7 +135,7 @@
             <img class="card-img-top rounded-0" src="images/teachers/teacher-4.jpg" alt="teacher">
             <div class="card-body">
               <a href="teacher-single.php?id_prof=<?php echo $Fetch['id_professor']; ?>">
-                <h4 class="card-title"><td><?php echo $Fetch['nome']; ?></td></h4>
+                <h4 class="card-title"><td><?php echo utf8_encode($Fetch['nome']); ?></td></h4>
               </a>
               <!--<p>Teacher</p>
               <ul class="list-inline">
@@ -171,7 +171,7 @@
           <h2 class="mb-0 text-nowrap mr-3">Our Research Areas</h2>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
           <div>
-            <a href="courses.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
+            <a href="research.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">View all</a>
           </div>
         </div>
       </div>
